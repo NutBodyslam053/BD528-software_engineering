@@ -7,7 +7,7 @@
 git clone <github_repository_url>
 ```
 
-### 1. Create template structure
+### 1. Create template structure & Run to create needed directories
 ```bash
 touch template.py
 python template.py
@@ -18,4 +18,10 @@ python template.py
 conda create -p venv python=3.9 -y
 conda activate venv/
 pip install -r requirements.txt
+```
+
+### 3. Initialize constructor for logging (src/mlProject/__init__.py)
+
+```bash
+
 ```
