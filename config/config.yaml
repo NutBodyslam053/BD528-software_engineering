@@ -6,3 +6,8 @@ data_ingestion:
   source_URL: https://github.com/NutBodyslam053/BD528-software_engineering/raw/main/data/diabetes_dataset__2019.zip
   local_data_file: artifacts/01_data_ingestion/data.zip
   unzip_dir: artifacts/01_data_ingestion
+
+data_validation:
+  root_dir: artifacts/02_data_validation
+  unzip_data_dir: artifacts/01_data_ingestion/diabetes_dataset__2019.csv
+  STATUS_FILE: artifacts/02_data_validation/status.txt

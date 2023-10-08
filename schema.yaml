@@ -1,17 +1,23 @@
 COLUMNS:
-  fixed acidity: float64
-  volatile acidity: float64
-  citric acid: float64
-  residual sugar: float64
-  chlorides: float64
-  free sulfur dioxide: float64
-  total sulfur dioxide: float64
-  density: float64
-  pH: float64
-  sulphates: float64
-  alcohol: float64
-  quality: int64
+  Age: int32
+  Gender: int32
+  Family_Diabetes: int32
+  highBP: int32
+  PhysicallyActive: int32
+  BMI: int32
+  Smoking: int32
+  Alcohol: int32
+  Sleep: int32
+  SoundSleep: int32
+  RegularMedicine: int32
+  JunkFood: int32
+  Stress: int32
+  BPLevel: int32
+  Pregancies: int32
+  Pdiabetes: int32
+  UriationFreq: int32
+  Diabetic: int32
 
 
 TARGET_COLUMN:
-  name: quality
+  name: Diabetic
