@@ -1,0 +1,15 @@
+artifact_uri: file:///E:/NutBodyslam053/work/Projects/MLOps/BD528-software_engineering/mlruns/0/d88c494608c14b6f83523667e18f26e4/artifacts
+end_time: 1697117654831
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: d88c494608c14b6f83523667e18f26e4
+run_name: loud-shrike-794
+run_uuid: d88c494608c14b6f83523667e18f26e4
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1697117652358
+status: 3
+tags: []
+user_id: NutBodyslam

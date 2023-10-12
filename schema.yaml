@@ -1,23 +1,22 @@
 COLUMNS:
-  Age: int32
-  Gender: int32
-  Family_Diabetes: int32
-  highBP: int32
-  PhysicallyActive: int32
-  BMI: int32
-  Smoking: int32
-  Alcohol: int32
-  Sleep: int32
-  SoundSleep: int32
-  RegularMedicine: int32
-  JunkFood: int32
-  Stress: int32
-  BPLevel: int32
-  Pregancies: int32
-  Pdiabetes: int32
-  UriationFreq: int32
-  Diabetic: int32
-
+  Age: object
+  Gender: object
+  Family_Diabetes: object
+  highBP: object
+  PhysicallyActive: object
+  BMI: float64
+  Smoking: object
+  Alcohol: object
+  Sleep: int64
+  SoundSleep: int64
+  RegularMedicine: object
+  JunkFood: object
+  Stress: object
+  BPLevel: object
+  Pregancies: float64
+  Pdiabetes: object
+  UriationFreq: object
+  Diabetic: object
 
 TARGET_COLUMN:
   name: Diabetic
