@@ -73,7 +73,7 @@ export MLFLOW_TRACKING_PASSWORD=b85bafd69d98861fee89f5bf70dc5f62cf41c2e5
 ```
 
 **For Windows PowerShell:**
-```bash
+```powershell
 $env:MLFLOW_TRACKING_URI = "https://dagshub.com/NutBodyslam053/BD528-software_engineering.mlflow"
 $env:MLFLOW_TRACKING_USERNAME = "NutBodyslam053"
 $env:MLFLOW_TRACKING_PASSWORD = "b85bafd69d98861fee89f5bf70dc5f62cf41c2e5"
