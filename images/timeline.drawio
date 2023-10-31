@@ -1,0 +1,88 @@
+<mxfile host="app.diagrams.net" modified="2023-10-06T07:07:53.267Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/117.0.0.0 Safari/537.36 Edg/117.0.2045.55" etag="A4TA6ezk-J0rRr7d9foo" version="22.0.3" type="device">
+  <diagram name="Page-1" id="fc2ac565-0d4e-3f0d-88b0-a54af1634ed7">
+    <mxGraphModel dx="1042" dy="613" grid="1" gridSize="10" guides="1" tooltips="1" connect="0" arrows="1" fold="1" page="1" pageScale="1.5" pageWidth="1169" pageHeight="827" background="none" math="0" shadow="0">
+      <root>
+        <mxCell id="0" style=";html=1;" />
+        <mxCell id="1" style=";html=1;" parent="0" />
+        <mxCell id="pyxxSK5ykiwXqTo4mOVW-115" value="" style="align=left;strokeColor=#CCCCCC;html=1;" parent="1" vertex="1">
+          <mxGeometry x="617" y="230" width="600" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="75" value="&lt;b&gt;Phase 1 (Months 1-2): &lt;/b&gt;&lt;br&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;Data Collection &amp;amp; Preprocessing" style="align=left;strokeColor=#CCCCCC;html=1;" parent="1" vertex="1">
+          <mxGeometry x="347.0000000000003" y="149.99999999999977" width="270" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="2" value="Task Name" style="strokeWidth=1;fontStyle=0;html=1;" parent="1" vertex="1">
+          <mxGeometry x="347" y="130" width="270" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="67c90442a009f359-291" value="" style="align=left;strokeColor=#CCCCCC;html=1;" parent="1" vertex="1">
+          <mxGeometry x="617" y="150" width="600" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="4" value="Jan" style="strokeWidth=1;fontStyle=0;html=1;" parent="1" vertex="1">
+          <mxGeometry x="617" y="130" width="50" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="67c90442a009f359-278" value="Feb" style="strokeWidth=1;fontStyle=0;html=1;" parent="1" vertex="1">
+          <mxGeometry x="667" y="130" width="50" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="67c90442a009f359-279" value="Mar" style="strokeWidth=1;fontStyle=0;html=1;" parent="1" vertex="1">
+          <mxGeometry x="717" y="130" width="50" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="67c90442a009f359-280" value="Apr" style="strokeWidth=1;fontStyle=0;html=1;" parent="1" vertex="1">
+          <mxGeometry x="767" y="130" width="50" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="67c90442a009f359-281" value="May" style="strokeWidth=1;fontStyle=0;html=1;" parent="1" vertex="1">
+          <mxGeometry x="817" y="130" width="50" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="67c90442a009f359-282" value="June" style="strokeWidth=1;fontStyle=0;html=1;" parent="1" vertex="1">
+          <mxGeometry x="867" y="130" width="50" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="67c90442a009f359-283" value="July" style="strokeWidth=1;fontStyle=0;html=1;" parent="1" vertex="1">
+          <mxGeometry x="917" y="130" width="50" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="67c90442a009f359-284" value="Aug" style="strokeWidth=1;fontStyle=0;html=1;" parent="1" vertex="1">
+          <mxGeometry x="967" y="130" width="50" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="67c90442a009f359-285" value="Sept" style="strokeWidth=1;fontStyle=0;html=1;" parent="1" vertex="1">
+          <mxGeometry x="1017" y="130" width="50" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="67c90442a009f359-286" value="Oct" style="strokeWidth=1;fontStyle=0;html=1;" parent="1" vertex="1">
+          <mxGeometry x="1067" y="130" width="50" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="67c90442a009f359-287" value="Nov" style="strokeWidth=1;fontStyle=0;html=1;" parent="1" vertex="1">
+          <mxGeometry x="1117" y="130" width="50" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="67c90442a009f359-288" value="Dec" style="strokeWidth=1;fontStyle=0;html=1;" parent="1" vertex="1">
+          <mxGeometry x="1167" y="130" width="50" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="pyxxSK5ykiwXqTo4mOVW-100" value="&lt;font style=&quot;&quot;&gt;&lt;span style=&quot;font-size: 24px;&quot;&gt;Timeline&lt;/span&gt;&lt;br&gt;&lt;font style=&quot;font-size: 20px;&quot; color=&quot;#999999&quot;&gt;(Estimated timeframe of 6-8 months)&lt;/font&gt;&lt;br&gt;&lt;/font&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="347" y="60" width="463" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="pyxxSK5ykiwXqTo4mOVW-104" value="&lt;b&gt;Phase 2 (Months 3-4): &lt;br&gt;&lt;/b&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;Model Development &amp;amp; Evaluation" style="align=left;strokeColor=#CCCCCC;html=1;" parent="1" vertex="1">
+          <mxGeometry x="347.0000000000003" y="189.99999999999977" width="270" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="pyxxSK5ykiwXqTo4mOVW-107" value="&lt;b&gt;Phase 3 (Months 5-6): &lt;/b&gt;&lt;br&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;Web Application &amp;amp; Flask API Development" style="align=left;strokeColor=#CCCCCC;html=1;" parent="1" vertex="1">
+          <mxGeometry x="347.0000000000003" y="229.99999999999977" width="270" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="pyxxSK5ykiwXqTo4mOVW-112" value="&lt;b&gt;Phase 4 (Months 7-8): &lt;br&gt;&lt;/b&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;MLflow Integration, Testing, &amp;amp; Deployment" style="align=left;strokeColor=#CCCCCC;html=1;" parent="1" vertex="1">
+          <mxGeometry x="347.0000000000003" y="269.9999999999998" width="270" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="pyxxSK5ykiwXqTo4mOVW-114" value="" style="align=left;strokeColor=#CCCCCC;html=1;" parent="1" vertex="1">
+          <mxGeometry x="617" y="190" width="600" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="pyxxSK5ykiwXqTo4mOVW-116" value="" style="align=left;strokeColor=#CCCCCC;html=1;" parent="1" vertex="1">
+          <mxGeometry x="617" y="270" width="600" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="pyxxSK5ykiwXqTo4mOVW-101" value="" style="whiteSpace=wrap;html=1;strokeWidth=2;fillColor=#dae8fc;fontSize=14;align=center;strokeColor=#6c8ebf;" parent="1" vertex="1">
+          <mxGeometry x="617" y="150" width="100" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="pyxxSK5ykiwXqTo4mOVW-113" value="" style="whiteSpace=wrap;html=1;strokeWidth=2;fillColor=#dae8fc;fontSize=14;align=center;strokeColor=#6c8ebf;" parent="1" vertex="1">
+          <mxGeometry x="717" y="190" width="100" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="pyxxSK5ykiwXqTo4mOVW-117" value="" style="whiteSpace=wrap;html=1;strokeWidth=2;fillColor=#dae8fc;fontSize=14;align=center;strokeColor=#6c8ebf;" parent="1" vertex="1">
+          <mxGeometry x="817" y="230" width="100" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="pyxxSK5ykiwXqTo4mOVW-118" value="" style="whiteSpace=wrap;html=1;strokeWidth=2;fillColor=#dae8fc;fontSize=14;align=center;strokeColor=#6c8ebf;" parent="1" vertex="1">
+          <mxGeometry x="917" y="270" width="100" height="40" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

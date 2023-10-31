@@ -86,4 +86,4 @@ set MLFLOW_TRACKING_USERNAME=NutBodyslam053
 set MLFLOW_TRACKING_PASSWORD=b85bafd69d98861fee89f5bf70dc5f62cf41c2e5
 ```
 
-> MLflow tracking remote: https://dagshub.com/NutBodyslam053/mlflow-demo.mlflow
+> MLflow tracking remote: https://dagshub.com/NutBodyslam053/BD528-software_engineering.mlflow

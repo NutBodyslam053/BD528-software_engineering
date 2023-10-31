@@ -4,6 +4,7 @@ from sklearn.model_selection import train_test_split
 import pandas as pd
 from sklearn.preprocessing import OrdinalEncoder, RobustScaler
 from mlProject.entity.config_entity import DataTransformationConfig
+import joblib
 
 
 class DataTransformation:
@@ -36,6 +37,9 @@ class DataTransformation:
         # Data Scaling
         scaler = RobustScaler()
         X_scaled = scaler.fit_transform(df.iloc[:, :-1])
+        
+        # Save fitted scaler
+        joblib.dump(scaler, os.path.join(self.config.root_dir, self.config.scaler_name))
 
         X = pd.DataFrame(
             data=X_scaled,

@@ -17,6 +17,7 @@ data_validation:
 data_transformation:
   root_dir: artifacts/03_data_transformation
   data_path: artifacts/01_data_ingestion/diabetes_dataset__2019.csv
+  scaler_name: scaler.joblib
 
 
 model_trainer:

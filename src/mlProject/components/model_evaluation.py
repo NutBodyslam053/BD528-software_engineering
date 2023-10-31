@@ -38,6 +38,7 @@ class ModelEvaluation:
 
             scores = {"accuracy": accuracy,
                       "precision": precision, "recall": recall, "f1": f1}
+            
             save_json(path=Path(self.config.metric_file_name), data=scores)
 
             mlflow.log_params(self.config.all_params)

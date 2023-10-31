@@ -26,6 +26,7 @@ class ModelTrainer:
             n_jobs=self.config.n_jobs,
             random_state=42
         )
+        
         rf.fit(X_train, y_train)
 
         joblib.dump(rf, os.path.join(
