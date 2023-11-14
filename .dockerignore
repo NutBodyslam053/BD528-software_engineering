@@ -1,0 +1,17 @@
+*.log
+tmp/
+
+# Environments
+.env
+.venv
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+
+# etc.
+artifacts/
+data/
+images/
+mlruns/

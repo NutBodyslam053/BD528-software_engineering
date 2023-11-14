@@ -62,6 +62,31 @@ python app.py
 ### STEP 5: Open the browser
 > Diabetes Prediction Web-UI: http://localhost:8080
 
+## API Testing
+```bash
+{
+    "age": "50-59",
+    "gender": "male",
+    "family_diabetes": "no",
+    "highbp": "yes",
+    "physicallyactive": "one hr or more",
+    "bmi": 39,
+    "smoking": "no",
+    "alcohol": "no",
+    "sleep": 8,
+    "soundsleep": 6,
+    "regularmedicine": "no",
+    "junkfood": "occasionally",
+    "stress": "sometimes",
+    "bplevel": "high",
+    "pregancies": 0,
+    "pdiabetes": "no",
+    "uriationfreq": "not much"
+}
+
+age=50-59&gender=male&family_diabetes=no&highbp=yes&physicallyactive=one+hr+or+more&bmi=39&smoking=no&alcohol=no&sleep=8&soundsleep=6&regularmedicine=no&junkfood=occasionally&stress=sometimes&bplevel=high&pregancies=0&pdiabetes=no&uriationfreq=not+much&register=Predict
+```
+
 ## For ML Developer
 ### Setup system environment variables
 

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Predict</title>
+    <link rel="stylesheet" href="/static/assets/styles.css">
+</head>
+<body>
+    <div class="header form-input">
+      Diabetes Result
+    </div>
+
+    
+    <div style="font-size: 42px; text-align: center; margin-top: 30px;">
+      <div>
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQDGRJKgPs1lAryh4x2So_gH_1vOjEoVJHorMf2b_qRpXf53JLj_utlrOyOPOA2gI18uYI&usqp=CAU" >
+      </div>
+        {{result}}
+    </div>
+
+      <div class="sub-header" style="display: grid; grid-template-columns: 2fr 1fr;">
+
+        <div>
+          Feedback Rating <br>
+
+          <div class="star-rating">
+            <label for="star1"></label>
+            <input type="radio" id="star1" name="rating" value="1" />
+            <label for="star2"></label>
+            <input type="radio" id="star2" name="rating" value="2" />
+            <label for="star3"></label>
+            <input type="radio" id="star3" name="rating" value="3" />
+            <label for="star4"></label>
+            <input type="radio" id="star4" name="rating" value="4" />
+            <label for="star5"></label>
+            <input type="radio" id="star5" name="rating" value="5" />
+          </div>
+
+          <div style="margin-top: 10px;">
+            Tell us what can be improved? <br>              
+            <textarea style="margin-top: 10px;" name="feedback" id="feedback" cols="50" rows="5" placeholder="Other suggestions..."></textarea>
+          </div>
+
+          <div>
+            <input class="button-send" type="submit" name="feedback-send" value="Send">
+          </div>
+          
+        </div>
+
+        <div>
+          <div>
+            <img src="https://github.com/NutBodyslam053/BD528-software_engineering/blob/main/images/game2.jpg?raw=true" width=150px>
+          </div>
+  
+          <div style="font-size: 18px; font-weight: bold; color: chocolate;">
+            ปรึกษาปัญหาเบาหวาน (Call Center)
+          </div>
+
+          <div style="font-size: 18px;">
+            นายแพทย์พศุตม์ เพ็ญนิเวศน์สุข
+          </div>
+
+          <div style="font-size: 16px; color: gray;">
+            ศูนย์เบาหวานศิริราช คณะแพทย์ศาสตร์ศิริราชพยาบาล <br>
+            ให้บริการเฉพาะในเวลาราชการ: 08.30 - 16.00 น. <br>
+            โทร: 02-414-1298, 02-419-9569
+          </div>
+        </div>
+
+      </div>  
+    
+</body>
+</html>

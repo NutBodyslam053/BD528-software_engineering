@@ -2,7 +2,15 @@ from flask import Flask, render_template, request
 from flask_cors import CORS
 import os
 import numpy as np
-from mlProject.pipeline.prediction import PredictionPipeline
+from src.mlProject.pipeline.prediction import PredictionPipeline
+from dotenv import load_dotenv
+
+
+load_dotenv()
+
+MLFLOW_TRACKING_URI = os.getenv('MLFLOW_TRACKING_URI')
+MLFLOW_TRACKING_USERNAME = os.getenv('MLFLOW_TRACKING_USERNAME')
+MLFLOW_TRACKING_PASSWORD = os.getenv('MLFLOW_TRACKING_PASSWORD')
 
 
 app = Flask(__name__)
@@ -15,9 +23,9 @@ def homepage():
 
 @app.route('/train', methods=['GET'])
 def training():
-    os.environ["MLFLOW_TRACKING_URI"] = "https://dagshub.com/NutBodyslam053/BD528-software_engineering.mlflow"
-    os.environ["MLFLOW_TRACKING_USERNAME"] = "NutBodyslam053"
-    os.environ["MLFLOW_TRACKING_PASSWORD"] = "b85bafd69d98861fee89f5bf70dc5f62cf41c2e5"
+    os.environ["MLFLOW_TRACKING_URI"] = MLFLOW_TRACKING_URI
+    os.environ["MLFLOW_TRACKING_USERNAME"] = MLFLOW_TRACKING_USERNAME
+    os.environ["MLFLOW_TRACKING_PASSWORD"] = MLFLOW_TRACKING_PASSWORD
     
     os.system("python main.py")
     
@@ -26,29 +34,68 @@ def training():
 @app.route('/predict', methods=['POST', 'GET'])
 def index():
     if request.method == 'POST':
+        
+        def your_endpoint():
+            if request.form:
+                form_data = request.form.to_dict()
+                print('-'*120)
+                print('form_data:', form_data)
+                print('-'*120)
+                return form_data
+
+            elif request.json:
+                json_data = request.json
+                print('-'*120)
+                print('json_data:', json_data)
+                print('-'*120)
+                return json_data
+
+            else:
+                print('error')
+                return 400
+            
+        request_data = your_endpoint()
+
         try:
-            # Reading the inputs given by the user
-            age = str(request.form['age'])
-            gender = str(request.form['gender'])
-            family_diabetes = str(request.form['family_diabetes'])
-            highbp = str(request.form['highbp'])
-            physicallyactive = str(request.form['physicallyactive'])
-            bmi = float(request.form['bmi'])
-            smoking = str(request.form['smoking'])
-            alcohol = str(request.form['alcohol'])
-            sleep = float(request.form['sleep'])
-            soundsleep = float(request.form['soundsleep'])
-            regularmedicine = str(request.form['regularmedicine'])
-            junkfood = str(request.form['junkfood'])
-            stress = str(request.form['stress'])
-            bplevel = str(request.form['bplevel'])
-            pregancies = float(request.form['pregancies'])
-            pdiabetes = str(request.form['pdiabetes'])
-            uriationfreq = str(request.form['uriationfreq'])
+            age = str(request_data['age'])
+            gender = str(request_data['gender'])
+            family_diabetes = str(request_data['family_diabetes'])
+            highbp = str(request_data['highbp'])
+            physicallyactive = str(request_data['physicallyactive'])
+            bmi = float(request_data['bmi'])
+            smoking = str(request_data['smoking'])
+            alcohol = str(request_data['alcohol'])
+            sleep = float(request_data['sleep'])
+            soundsleep = float(request_data['soundsleep'])
+            regularmedicine = str(request_data['regularmedicine'])
+            junkfood = str(request_data['junkfood'])
+            stress = str(request_data['stress'])
+            bplevel = str(request_data['bplevel'])
+            pregancies = float(request_data['pregancies'])
+            pdiabetes = str(request_data['pdiabetes'])
+            uriationfreq = str(request_data['uriationfreq'])
+            
+            # age = str(request.form['age'])  
+            # gender = str(request.form['gender'])
+            # family_diabetes = str(request.form['family_diabetes'])
+            # highbp = str(request.form['highbp'])
+            # physicallyactive = str(request.form['physicallyactive'])
+            # bmi = float(request.form['bmi'])
+            # smoking = str(request.form['smoking'])
+            # alcohol = str(request.form['alcohol'])
+            # sleep = float(request.form['sleep'])
+            # soundsleep = float(request.form['soundsleep'])
+            # regularmedicine = str(request.form['regularmedicine'])
+            # junkfood = str(request.form['junkfood'])
+            # stress = str(request.form['stress'])
+            # bplevel = str(request.form['bplevel'])
+            # pregancies = float(request.form['pregancies'])
+            # pdiabetes = str(request.form['pdiabetes'])
+            # uriationfreq = str(request.form['uriationfreq'])
 
             feature_mappings = {
                 'Age': {'less than 40': 0, '40-49': 1, '50-59': 2, '60 or older': 3},
-                'Gender': {'Male': 0, 'Female': 1},
+                'Gender': {'male': 0, 'female': 1},
                 'Family_Diabetes': {'no': 0, 'yes': 1},
                 'highBP': {'no': 0, 'yes': 1},
                 'PhysicallyActive': {'none': 0, 'less than half an hr': 1, 'more than half an hr': 2, 'one hr or more': 3},
@@ -76,7 +123,7 @@ def index():
             bplevel_mapped = float(feature_mappings['BPLevel'][bplevel])
             pdiabetes_mapped = float(feature_mappings['Pdiabetes'][pdiabetes])
             uriationfreq_mapped = float(feature_mappings['UriationFreq'][uriationfreq])
-                       
+            
             data = [
                 age_mapped, 
                 gender_mapped, 
@@ -107,10 +154,12 @@ def index():
             else:
                 result = "คุณไม่มีความเสี่ยงเป็นโรคเบาหวาน"
 
-            return render_template('results.html', result=result)
+            return render_template('predict.html', result=result)
 
         except Exception as e:
+            print('-'*120)
             print('The Exception message is:', e)
+            print('-'*120)
             
             return 'Something is wrong!!!'
 
@@ -120,4 +169,4 @@ def index():
 
 
 if __name__ == "__main__":
-    app.run(host="0.0.0.0", port=8080, debug=True)
+    app.run(host="0.0.0.0", port=5000, debug=True)

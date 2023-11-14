@@ -1,0 +1,98 @@
+
+.header {
+    font-size: 36px;
+    font-weight: bold;
+    /* text-align: center; */
+}
+
+.sub-header {
+    font-size: 24px;
+    /* margin-bottom: 0px; */
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 10px;
+    box-shadow: 0 -5px 5px -5px #333;
+}
+
+.header-form {
+    width: 150px;
+    font-size: 16px;
+}
+
+.wide-select {
+    width: 385px;
+    height: 25px;
+    border: 1px gainsboro solid;
+    /* font-size: 14px; */
+}
+
+.wide-input {
+    /* width: 200px; */
+    height: 22px;
+}
+
+.flex {
+    display: flex;
+}
+
+.form-input {
+    margin-top: 10px;
+}
+
+input.form, textarea {
+    border: 1px gainsboro solid;
+    width: 380px;
+}
+
+.button {
+    border: 0;
+    width: 25.25%;
+    height: 45px;
+    background-color: #2962FF;
+    color: white;
+    margin-top: 50px;
+}
+
+.button-send {
+    border: 0;
+    width: 15%;
+    height: 30px;
+    background-color: #2962FF;
+    color: white;
+    margin-left: 350px;
+}
+
+.star-rating {
+    display: inline-block;
+    font-size: 0;
+}
+
+.star-rating input {
+    display: none;
+}
+
+.star-rating label {
+    font-size: 35px;
+    cursor: pointer;
+    display: inline-block;
+    width: 30px;
+    text-align: center;
+}
+
+.star-rating label:before {
+    content: '\2605'; /* Unicode character for a star */
+    display: block;
+    color: #f39c12; /* Change the color of the star when checked */
+}
+
+.star-rating input:checked ~ label:before {
+    color: #ccc;
+}
+
+textarea {
+    width: 50%;
+    height: 100px;
+    resize: vertical;
+}
