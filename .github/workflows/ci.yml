@@ -19,16 +19,16 @@ jobs:
     - name: Checkout code
       uses: actions/checkout@v4
 
-    - name: Set up Python 3.9
-      uses: actions/setup-python@v3
-      with:
-        python-version: "3.9"
+    # - name: Set up Python 3.9
+    #   uses: actions/setup-python@v3
+    #   with:
+    #     python-version: "3.9"
 
-    - name: Install dependencies
-      run: |
-        python -m pip install --upgrade pip
-        pip install flake8 pytest
-        if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
+    # - name: Install dependencies
+    #   run: |
+    #     python -m pip install --upgrade pip
+    #     pip install flake8 pytest
+    #     if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
 
   test:
     runs-on: ubuntu-latest
@@ -83,8 +83,8 @@ jobs:
 
     - name: Set up git config
       run: |
-          git config user.name ${{ secrets.GITHUB_USERNAME }}
-          git config user.email ${{ secrets.GITHUB_USEREMAIL }}
+          git config user.name ${{ secrets.G_USERNAME }}
+          git config user.email ${{ secrets.G_USEREMAIL }}
           sed -i "s#$(echo "${{ github.actor }}" | tr '[:upper:]' '[:lower:]').*#${{ github.actor }}/bd528:${{ github.sha }}#g" deployment.yaml
           git add -A
           git commit -m "Update image for - ${{ github.sha }}"
