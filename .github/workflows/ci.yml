@@ -77,7 +77,7 @@ jobs:
       with:
         repository: ${{ github.repository }}
         ref: 'main'
-        path: infra
+        # path: infra
         token: ${{ secrets.G_TOKEN }}
         # ssh-key: ${{ secrets.G_SSH_KEY }}
 
@@ -85,7 +85,7 @@ jobs:
       run: |
           git config --global user.name ${{ secrets.G_USERNAME }}
           git config --global user.email ${{ secrets.G_USEREMAIL }}
-          sed -i "s#$(echo "${{ github.actor }}" | tr '[:upper:]' '[:lower:]').*#${{ github.actor }}/bd528:${{ github.sha }}#g" deployment.yaml
+          sed -i "s#$(echo "${{ github.actor }}" | tr '[:upper:]' '[:lower:]').*#${{ github.actor }}/bd528:${{ github.sha }}#g" ./infra/deployment.yaml
           git add -A
           git commit -m "Update image for - ${{ github.sha }}"
           git push
