@@ -14,6 +14,6 @@ spec:
     spec:
       containers:
         - name: my-container
-          image: nutbodyslam053/rust:latest
+          image: nutbodyslam053/bd528
           ports:
           - containerPort: 8080

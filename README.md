@@ -112,3 +112,20 @@ set MLFLOW_TRACKING_PASSWORD=b85bafd69d98861fee89f5bf70dc5f62cf41c2e5
 ```
 
 > MLflow tracking remote: https://dagshub.com/NutBodyslam053/BD528-software_engineering.mlflow
+
+
+Install Argo CD
+```bash
+kubectl create namespace argocd
+kubectl apply -n argocd -f https://raw.githubusercontent.com/argoproj/argo-cd/stable/manifests/install.yaml
+```
+
+Argocd UI
+```bash
+kubectl port-forward -n argocd svc/argocd-server 8080:443
+```
+
+Argo Secret
+```bash
+kubectl get secret argocd-initial-admin-secret -n argocd -o yaml
+```
