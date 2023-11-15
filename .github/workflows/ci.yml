@@ -83,12 +83,10 @@ jobs:
 
     - name: Set up git config
       run: |
+          git init
           git config user.name ${{ secrets.G_USERNAME }}
           git config user.email ${{ secrets.G_USEREMAIL }}
           sed -i "s#$(echo "${{ github.actor }}" | tr '[:upper:]' '[:lower:]').*#${{ github.actor }}/bd528:${{ github.sha }}#g" deployment.yaml
           git add -A
           git commit -m "Update image for - ${{ github.sha }}"
           git push
-
-
-
