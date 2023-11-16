@@ -63,6 +63,10 @@ python app.py
 > Diabetes Prediction Web-UI: http://localhost:8080
 
 ## API Testing
+
+### Predict = 0
+Result: คุณไม่มีความเสี่ยงเป็นโรคเบาหวาน
+
 ```bash
 {
     "age": "50-59",
@@ -83,8 +87,31 @@ python app.py
     "pdiabetes": "no",
     "uriationfreq": "not much"
 }
+```
 
-age=50-59&gender=male&family_diabetes=no&highbp=yes&physicallyactive=one+hr+or+more&bmi=39&smoking=no&alcohol=no&sleep=8&soundsleep=6&regularmedicine=no&junkfood=occasionally&stress=sometimes&bplevel=high&pregancies=0&pdiabetes=no&uriationfreq=not+much&register=Predict
+### Predict = 1
+Result: คุณมีความเสี่ยงเป็นโรคเบาหวาน
+
+```bash
+{
+    "age": "60 or older",
+    "gender": "male",
+    "family_diabetes": "yes",
+    "highbp": "yes",
+    "physicallyactive": "more than half an hr",
+    "bmi": 27,
+    "smoking": "no",
+    "alcohol": "no",
+    "sleep": 6,
+    "soundsleep": 5,
+    "regularmedicine": "yes",
+    "junkfood": "occasionally",
+    "stress": "sometimes",
+    "bplevel": "high",
+    "pregancies": 0,
+    "pdiabetes": "no",
+    "uriationfreq": "quite often"
+}
 ```
 
 ## For ML Developer

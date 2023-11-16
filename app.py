@@ -3,6 +3,7 @@ from flask_cors import CORS
 import os
 import numpy as np
 from src.mlProject.pipeline.prediction import PredictionPipeline
+from src.mlProject.utils.common import display_section_heading
 from dotenv import load_dotenv
 
 
@@ -35,23 +36,21 @@ def training():
 def index():
     if request.method == 'POST':
         
+        terminal_width = os.get_terminal_size().columns
+        
         def your_endpoint():
             if request.form:
                 form_data = request.form.to_dict()
-                print('-'*120)
-                print('form_data:', form_data)
-                print('-'*120)
+                print('\033[31m' + '-'*terminal_width + f'\nForm Data: {form_data}\n' + '-'*terminal_width + '\033[0m')
                 return form_data
 
             elif request.json:
                 json_data = request.json
-                print('-'*120)
-                print('json_data:', json_data)
-                print('-'*120)
+                print('\033[31m' + '-'*terminal_width + f'\nJSON Data: {json_data}\n' + '-'*terminal_width + '\033[0m')
                 return json_data
 
             else:
-                print('error')
+                print('Error')
                 return 400
             
         request_data = your_endpoint()
@@ -147,19 +146,31 @@ def index():
             data = np.array(data).reshape(1,-1)            
             obj = PredictionPipeline()
             predict = obj.predict(data)
-            print('data:', data)
             
             if predict == 1:
                 result = "คุณมีความเสี่ยงเป็นโรคเบาหวาน"
             else:
                 result = "คุณไม่มีความเสี่ยงเป็นโรคเบาหวาน"
+            
+            print('\033[33m' + '-'*terminal_width + f'\nTransformed Data: {data}\n' + '-'*terminal_width + '\033[0m')
+            print('\033[32m' + '-'*terminal_width + f'\nPredict: {predict}\n' + '-'*terminal_width + '\033[0m')
 
+            display_section_heading(
+                title="result",
+                content=result,
+                symbol="=",
+                title_case='upper', 
+                color='\033[34m',  # Blue color
+                alignment="center",
+                bold=True
+            )
+            
             return render_template('predict.html', result=result)
 
         except Exception as e:
-            print('-'*120)
-            print('The Exception message is:', e)
-            print('-'*120)
+            print('='*terminal_width)
+            print('The Exception Message is:', e)
+            print('='*terminal_width)
             
             return 'Something is wrong!!!'
 
