@@ -112,6 +112,26 @@ Result: คุณมีความเสี่ยงเป็นโรคเบ
     "pdiabetes": "no",
     "uriationfreq": "quite often"
 }
+
+curl 'http://127.0.0.1:5000/predict' \
+  -H 'Accept: text/html,application/xhtml xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7' \
+  -H 'Accept-Language: en-US,en;q=0.9,th;q=0.8' \
+  -H 'Cache-Control: max-age=0' \
+  -H 'Connection: keep-alive' \
+  -H 'Content-Type: application/x-www-form-urlencoded' \
+  -H 'Origin: http://127.0.0.1:5000' \
+  -H 'Referer: http://127.0.0.1:5000/' \
+  -H 'Sec-Fetch-Dest: document' \
+  -H 'Sec-Fetch-Mode: navigate' \
+  -H 'Sec-Fetch-Site: same-origin' \
+  -H 'Sec-Fetch-User: ?1' \
+  -H 'Upgrade-Insecure-Requests: 1' \
+  -H 'User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36 Edg/119.0.0.0' \
+  -H 'sec-ch-ua: "Microsoft Edge";v="119", "Chromium";v="119", "Not?A_Brand";v="24"' \
+  -H 'sec-ch-ua-mobile: ?0' \
+  -H 'sec-ch-ua-platform: "Windows"' \
+  --data-raw 'age=60 or older&gender=male&family_diabetes=yes&highbp=yes&physicallyactive=more than half an hr&bmi=27&smoking=no&alcohol=no&sleep=6&soundsleep=5&regularmedicine=yes&junkfood=occasionally&stress=sometimes&bplevel=high&pregancies=0&pdiabetes=no&uriationfreq=quite often&register=Predict' \
+  --compressed
 ```
 
 ## For ML Developer
