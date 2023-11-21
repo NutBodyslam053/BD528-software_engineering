@@ -1,11 +1,11 @@
 import pandas as pd
 from sklearn.metrics import accuracy_score, precision_score, recall_score, f1_score
-from mlProject.utils.common import save_json
+from src.mlProject.utils.common import save_json
 from urllib.parse import urlparse
 import mlflow
 import mlflow.sklearn
 import joblib
-from mlProject.entity.config_entity import ModelEvaluationConfig
+from src.mlProject.entity.config_entity import ModelEvaluationConfig
 from pathlib import Path
 
 

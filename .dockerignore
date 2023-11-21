@@ -11,7 +11,6 @@ env.bak/
 venv.bak/
 
 # etc.
-artifacts/
 data/
 images/
 mlruns/

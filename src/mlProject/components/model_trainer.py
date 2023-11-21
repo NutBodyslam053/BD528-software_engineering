@@ -2,7 +2,7 @@ import os
 import pandas as pd
 from sklearn.ensemble import RandomForestClassifier
 import joblib
-from mlProject.entity.config_entity import ModelTrainerConfig
+from src.mlProject.entity.config_entity import ModelTrainerConfig
 
 
 class ModelTrainer:

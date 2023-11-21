@@ -1,7 +1,7 @@
 import os
 from box.exceptions import BoxValueError
 import yaml
-from mlProject import logger
+from src.mlProject import logger
 import json
 import joblib
 from ensure import ensure_annotations
@@ -114,7 +114,7 @@ def get_size(path: Path) -> str:
     size_in_kb = round(os.path.getsize(path)/1024)
     return f"~ {size_in_kb} KB"
 
-@ensure_annotations
+# @ensure_annotations
 def display_section_heading(title, content, symbol="=", title_case="title", color=None, alignment="center", bold=True):
     """Display a section heading with a specified title and content.
 
@@ -141,8 +141,12 @@ def display_section_heading(title, content, symbol="=", title_case="title", colo
     # Ensure the symbol is a single character
     if len(symbol) != 1:
         raise ValueError("The symbol should be a single character.")
-
-    terminal_width = os.get_terminal_size().columns
+    
+    try:
+        terminal_width = os.get_terminal_size().columns
+    except OSError as e:
+        terminal_width = 100
+        print(f"Error getting terminal size: {e}")
 
     # Calculate the available space for the title
     available_space = terminal_width - len(title) - 2

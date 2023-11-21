@@ -3,6 +3,8 @@ from flask_cors import CORS
 import os
 import numpy as np
 from src.mlProject.pipeline.prediction import PredictionPipeline
+import sys
+sys.path.append('/src/mlProject/utils/common')
 from src.mlProject.utils.common import display_section_heading
 from dotenv import load_dotenv
 
@@ -22,21 +24,37 @@ def homepage():
     
     return render_template("index.html")
 
+#======================== For Windows ========================#
+# @app.route('/train', methods=['GET'])
+# def training():
+#     os.environ["MLFLOW_TRACKING_URI"] = MLFLOW_TRACKING_URI
+#     os.environ["MLFLOW_TRACKING_USERNAME"] = MLFLOW_TRACKING_USERNAME
+#     os.environ["MLFLOW_TRACKING_PASSWORD"] = MLFLOW_TRACKING_PASSWORD
+    
+#     os.system("python main.py")
+    
+#     return "Training Successful!"
+
+#======================== For Linux ========================#
 @app.route('/train', methods=['GET'])
 def training():
-    os.environ["MLFLOW_TRACKING_URI"] = MLFLOW_TRACKING_URI
-    os.environ["MLFLOW_TRACKING_USERNAME"] = MLFLOW_TRACKING_USERNAME
-    os.environ["MLFLOW_TRACKING_PASSWORD"] = MLFLOW_TRACKING_PASSWORD
+    os.getenv('MLFLOW_TRACKING_URI')
+    os.getenv('MLFLOW_TRACKING_USERNAME')
+    os.getenv('MLFLOW_TRACKING_PASSWORD')
     
-    os.system("python main.py")
+    os.system("python3 main.py")
     
     return "Training Successful!"
 
 @app.route('/predict', methods=['POST', 'GET'])
 def index():
     if request.method == 'POST':
-        
-        terminal_width = os.get_terminal_size().columns
+                
+        try:
+            terminal_width = os.get_terminal_size().columns
+        except OSError as e:
+            terminal_width = 100
+            print(f"Error getting terminal size: {e}")
         
         def your_endpoint():
             if request.form:
@@ -73,24 +91,6 @@ def index():
             pregancies = float(request_data['pregancies'])
             pdiabetes = str(request_data['pdiabetes'])
             uriationfreq = str(request_data['uriationfreq'])
-            
-            # age = str(request.form['age'])  
-            # gender = str(request.form['gender'])
-            # family_diabetes = str(request.form['family_diabetes'])
-            # highbp = str(request.form['highbp'])
-            # physicallyactive = str(request.form['physicallyactive'])
-            # bmi = float(request.form['bmi'])
-            # smoking = str(request.form['smoking'])
-            # alcohol = str(request.form['alcohol'])
-            # sleep = float(request.form['sleep'])
-            # soundsleep = float(request.form['soundsleep'])
-            # regularmedicine = str(request.form['regularmedicine'])
-            # junkfood = str(request.form['junkfood'])
-            # stress = str(request.form['stress'])
-            # bplevel = str(request.form['bplevel'])
-            # pregancies = float(request.form['pregancies'])
-            # pdiabetes = str(request.form['pdiabetes'])
-            # uriationfreq = str(request.form['uriationfreq'])
 
             feature_mappings = {
                 'Age': {'less than 40': 0, '40-49': 1, '50-59': 2, '60 or older': 3},

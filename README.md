@@ -36,20 +36,20 @@ src/mlProject/__init__.py
     5.8 Update the main.py
     5.9 Update the app.py
 
-## How to run?
+## How to manual run?
 
-### STEP 1: Clone the repository
+### STEP 1: Clone repository
 ```bash
-git clone https://github.com/NutBodyslam053/winequality
+git clone https://github.com/NutBodyslam053/BD528-software_engineering.git
 ```
 
-### STEP 2: Create a conda environment & activate it
+### STEP 2: Create conda environment & Activate it
 ```bash
 conda create -n <env_name> python=3.9 -y
 conda activate <env_name>
 ```
 
-### STEP 3: Install the requirements
+### STEP 3: Install dependencies
 ```bash
 pip install -r requirements.txt
 ```
@@ -59,8 +59,18 @@ pip install -r requirements.txt
 python app.py
 ```
 
-### STEP 5: Open the browser
-> Diabetes Prediction Web-UI: http://localhost:8080
+### STEP 5: Open web browser
+> Diabetes Prediction Web-UI: http://localhost:5000
+
+## How to run with Docker?
+
+### STEP 1: Pull image & Run app container
+```bash
+docker run -dp 5000:5000 nutbodyslam053/bd528:v1
+```
+
+### STEP 2: Open web browser
+> Diabetes Prediction Web-UI: http://localhost:5000
 
 ## API Testing
 
@@ -135,6 +145,7 @@ curl 'http://127.0.0.1:5000/predict' \
 ```
 
 ## For ML Developer
+
 ### Setup system environment variables
 
 **For Unix-like shells (e.g., Bash, macOS Terminal):**
@@ -156,6 +167,15 @@ $env:MLFLOW_TRACKING_PASSWORD = "b85bafd69d98861fee89f5bf70dc5f62cf41c2e5"
 set MLFLOW_TRACKING_URI=https://dagshub.com/NutBodyslam053/BD528-software_engineering.mlflow
 set MLFLOW_TRACKING_USERNAME=NutBodyslam053
 set MLFLOW_TRACKING_PASSWORD=b85bafd69d98861fee89f5bf70dc5f62cf41c2e5
+```
+
+### Run app container
+```bash
+docker run -dp 5000:5000 \
+    -e MLFLOW_TRACKING_URI=https://dagshub.com/NutBodyslam053/BD528-software_engineering.mlflow \
+    -e MLFLOW_TRACKING_USERNAME=NutBodyslam053 \
+    -e MLFLOW_TRACKING_PASSWORD=b85bafd69d98861fee89f5bf70dc5f62cf41c2e5 \
+    nutbodyslam053/bd528:v1
 ```
 
 > MLflow tracking remote: https://dagshub.com/NutBodyslam053/BD528-software_engineering.mlflow
