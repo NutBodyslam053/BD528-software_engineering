@@ -1,6 +1,6 @@
 # BD528-software_engineering
 
-## Workflows
+## Workflows (FOR OWNER)
 
 ### 1. Create Github repository & Clone to local repository
 ```bash
@@ -36,7 +36,7 @@ src/mlProject/__init__.py
     5.8 Update the main.py
     5.9 Update the app.py
 
-## How to manual run?
+## How to manual run? (FOR USERS)
 
 ### STEP 1: Clone repository
 ```bash
@@ -62,7 +62,7 @@ python app.py
 ### STEP 5: Open web browser
 > Diabetes Prediction Web-UI: http://localhost:5000
 
-## How to run with Docker?
+## How to run with Docker? (FOR USERS)
 
 ### STEP 1: Pull image & Run app container
 ```bash
@@ -72,7 +72,7 @@ docker run -dp 5000:5000 nutbodyslam053/bd528:v1
 ### STEP 2: Open web browser
 > Diabetes Prediction Web-UI: http://localhost:5000
 
-## API Testing
+## API Testing (FOR EVERYONE)
 
 ### Predict = 0
 Result: คุณไม่มีความเสี่ยงเป็นโรคเบาหวาน
@@ -144,7 +144,7 @@ curl 'http://127.0.0.1:5000/predict' \
   --compressed
 ```
 
-## For ML Developer
+## Model Training (FOR DEVELOPER)
 
 ### Setup system environment variables
 
