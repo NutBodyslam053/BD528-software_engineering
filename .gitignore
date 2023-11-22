@@ -154,6 +154,7 @@ cython_debug/
 
 # etc.
 mlruns/
+github-actions_self-hosted/README.md
 
 # PyCharm
 #  JetBrains specific template is maintained in a separate JetBrains.gitignore that can
