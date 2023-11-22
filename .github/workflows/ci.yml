@@ -62,7 +62,7 @@ jobs:
       uses: actions/checkout@v4
       with:
         repository: NutBodyslam053/BD528-software_engineering-infra
-        path: dev
+        # path: BD528-software_engineering-infra
         # token: ${{ secrets.G_TOKEN }}
         # ssh-key: ${{ secrets.G_SSH_KEY }}
 
