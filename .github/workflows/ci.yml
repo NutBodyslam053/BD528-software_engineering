@@ -62,7 +62,7 @@ jobs:
       uses: actions/checkout@v4
       with:
         repository: NutBodyslam053/BD528-software_engineering-infra
-        # path: BD528-software_engineering-infra
+        path: infra
         token: ${{ secrets.G_TOKEN }}
 
     - name: Update manifest files
