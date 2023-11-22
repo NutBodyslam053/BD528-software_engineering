@@ -63,7 +63,7 @@ jobs:
       with:
         repository: NutBodyslam053/BD528-software_engineering-infra
         # path: dev
-        # token: ${{ secrets.G_TOKEN }}
+        token: ${{ secrets.G_TOKEN }}
         # ssh-key: ${{ secrets.G_SSH_KEY }}
 
     - name: Update manifest files
