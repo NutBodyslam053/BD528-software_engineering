@@ -3,47 +3,47 @@ name: Python Application
 run-name: ${{ github.actor }} is building & deploying Python application
 
 on:
-  push:
-    branches: [ "main" ]
+  # push:
+  #   branches: [ "main" ]
   # pull_request:
   #   branches: [ "main" ]
-  # workflow_dispatch:
+  workflow_dispatch:
 
 jobs:
-  build:
-    runs-on: [self-hosted, my-runner]
+  # build:
+    # runs-on: [self-hosted, my-runner]
     # runs-on: ubuntu-latest
-    steps:
-    - name: Checkout repository
-      uses: actions/checkout@v4
+    # steps:
+    # - name: Checkout repository
+    #   uses: actions/checkout@v4
 
-    - name: Build
-      run: echo "Buildingngngngng!!!"
+    # - name: Build
+    #   run: echo "Buildingngngngng!!!"
 
-    # - name: Set up Python
-    #   uses: actions/setup-python@v3
-    #   with:
-    #     python-version: "3.9"
+    # # - name: Set up Python
+    # #   uses: actions/setup-python@v3
+    # #   with:
+    # #     python-version: "3.9"
 
-    # - name: Install dependencies
-    #   run: |
-    #     python -m pip install --upgrade pip
-    #     pip install flake8 pytest
-    #     if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
+    # # - name: Install dependencies
+    # #   run: |
+    # #     python -m pip install --upgrade pip
+    # #     pip install flake8 pytest
+    # #     if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
 
-    - name: Test
-      run: echo "Testingngngngng!!!"
+    # - name: Test
+    #   run: echo "Testingngngngng!!!"
 
-    # - name: Lint with flake8
-    #   run: |
-    #     # stop the build if there are Python syntax errors or undefined names
-    #     flake8 . --count --select=E9,F63,F7,F82 --show-source --statistics
-    #     # exit-zero treats all errors as warnings. The GitHub editor is 127 chars wide
-    #     flake8 . --count --exit-zero --max-complexity=10 --max-line-length=127 --statistics
+    # # - name: Lint with flake8
+    # #   run: |
+    # #     # stop the build if there are Python syntax errors or undefined names
+    # #     flake8 . --count --select=E9,F63,F7,F82 --show-source --statistics
+    # #     # exit-zero treats all errors as warnings. The GitHub editor is 127 chars wide
+    # #     flake8 . --count --exit-zero --max-complexity=10 --max-line-length=127 --statistics
 
-    # - name: Test with pytest
-    #   run: |
-    #     pytest
+    # # - name: Test with pytest
+    # #   run: |
+    # #     pytest
 
     # - name: Build & Push Docker image
     #   uses: mr-smithers-excellent/docker-build-push@v6
@@ -64,7 +64,6 @@ jobs:
         repository: NutBodyslam053/BD528-software_engineering-infra
         # path: BD528-software_engineering-infra
         token: ${{ secrets.G_TOKEN }}
-        # ssh-key: ${{ secrets.G_SSH_KEY }}
 
     - name: Update manifest files
       run: |
