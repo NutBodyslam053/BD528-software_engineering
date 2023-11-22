@@ -22,7 +22,7 @@ RUN apt-get update
 RUN apt-get install -y docker-ce-cli
 
 # Install the GitHub Actions Runner 
-RUN apt-get update && apt-get install -y sudo jq yq
+RUN apt-get update && apt-get install -y sudo jq yq git
 
 RUN useradd -m github && \
     usermod -aG sudo github && \

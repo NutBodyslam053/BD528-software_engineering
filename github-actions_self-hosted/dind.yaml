@@ -2,8 +2,8 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   creationTimestamp: null
-  # labels:
-  #   app: github-runner
+  labels:
+    app: github-runner
   name: github-runner
   namespace: github
 spec:
@@ -38,8 +38,34 @@ spec:
             secretKeyRef:
               name: github-secret
               key: GITHUB_REPOSITORY
-        # resources: 
-        #   requests: 
-        #     cpu: 20m 
-        #     memory: 512Mi 
+        - name: DOCKER_HOST
+          value: tcp://localhost:2375
+        volumeMounts:
+        - name: data
+          mountPath: /_work
+
+      - name: dind-container
+        image: docker:24.0.7-dind
+        imagePullPolicy: Always
+        securityContext: 
+          privileged: true 
+        env:
+        - name: DOCKER_TLS_CERTDIR
+          value: ""
+        resources: 
+          requests: 
+            cpu: 20m 
+            memory: 512Mi 
+        volumeMounts: 
+        - name: dind-storage 
+          mountPath: /var/lib/docker 
+        - name: data
+          mountPath: /_work
+
+      volumes:
+      - name: dind-storage 
+        emptyDir: {}
+      - name: data
+        emptyDir: {}
+
 status: {}
