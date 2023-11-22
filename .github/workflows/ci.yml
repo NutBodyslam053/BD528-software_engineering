@@ -54,10 +54,10 @@ jobs:
     #     username: ${{ secrets.DOCKER_USERNAME }}
     #     password: ${{ secrets.DOCKER_PASSWORD }}
 
-  deploy:
-    runs-on: [self-hosted, my-runner]
-    needs: [build]
-    steps:
+  # deploy:
+  #   runs-on: [self-hosted, my-runner]
+  #   needs: [build]
+    # steps:
     - name: Checkout repository
       uses: actions/checkout@v4
       with:
