@@ -71,7 +71,7 @@ jobs:
           git config --global user.email ${{ secrets.G_USEREMAIL }}
           echo "$(pwd)"
           
-          yq -iy '.spec.template.spec.containers[0].image = "nutbodyslam053/bd528:v2"' "$(pwd)/_work/BD528-software_engineering/BD528-software_engineering/dev/deployment.yaml"
+          yq -iy '.spec.template.spec.containers[0].image = "nutbodyslam053/bd528:v2"' "$(pwd)/dev/deployment.yaml"
           git add -A
           git commit -m "Update image for - ${{ github.sha }}"
           git push
