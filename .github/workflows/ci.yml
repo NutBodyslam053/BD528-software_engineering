@@ -45,14 +45,14 @@ jobs:
     #   run: |
     #     pytest
 
-    # - name: Build & Push Docker image
-    #   uses: mr-smithers-excellent/docker-build-push@v6
-    #   with:
-    #     image: nutbodyslam053/bd528
-    #     tags: ${{ github.sha }}
-    #     registry: docker.io
-    #     username: ${{ secrets.DOCKER_USERNAME }}
-    #     password: ${{ secrets.DOCKER_PASSWORD }}
+    - name: Build & Push Docker image
+      uses: mr-smithers-excellent/docker-build-push@v6
+      with:
+        image: nutbodyslam053/bd528
+        tags: ${{ github.sha }}
+        registry: docker.io
+        username: ${{ secrets.DOCKER_USERNAME }}
+        password: ${{ secrets.DOCKER_PASSWORD }}
 
   deploy:
     runs-on: [self-hosted, my-runner]
@@ -70,8 +70,7 @@ jobs:
           git config --global user.name ${{ secrets.G_USERNAME }}
           git config --global user.email ${{ secrets.G_USEREMAIL }}
           echo "$(pwd)"
-          
-          yq -iy '.spec.template.spec.containers[0].image = "nutbodyslam053/bd528:v2"' "$(pwd)/dev/deployment.yaml"
+          yq -iy '.spec.template.spec.containers[0].image = "${{ secrets.G_USERNAME }}/bd528:${{ github.sha }}"' "$(pwd)/dev/deployment.yaml"
           git add -A
           git commit -m "Update image for - ${{ github.sha }}"
           git push
