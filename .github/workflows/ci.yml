@@ -45,19 +45,19 @@ jobs:
     #   run: |
     #     pytest
 
-    # - name: Build & Push Docker image
-    #   uses: mr-smithers-excellent/docker-build-push@v6
-    #   with:
-    #     image: nutbodyslam053/bd528
-    #     tags: ${{ github.sha }}
-    #     registry: docker.io
-    #     username: ${{ secrets.DOCKER_USERNAME }}
-    #     password: ${{ secrets.DOCKER_PASSWORD }}
+    - name: Build & Push Docker image
+      uses: mr-smithers-excellent/docker-build-push@v6
+      with:
+        image: nutbodyslam053/bd528
+        tags: ${{ github.sha }}
+        registry: docker.io
+        username: ${{ secrets.DOCKER_USERNAME }}
+        password: ${{ secrets.DOCKER_PASSWORD }}
 
-  # deploy:
-  #   runs-on: [self-hosted, my-runner]
-  #   needs: [build]
-    # steps:
+  deploy:
+    runs-on: [self-hosted, my-runner]
+    needs: [build]
+    steps:
     - name: Checkout repository
       uses: actions/checkout@v4
       with:
