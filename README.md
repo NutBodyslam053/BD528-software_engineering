@@ -1,40 +1,27 @@
 # BD528-software_engineering
 
-## Workflows (FOR OWNER)
+## Deployment Architecture
+![](image/../images/GitOps/cicd-Architecture.png)
 
-### 1. Create Github repository & Clone to local repository
-```bash
-git clone <github_repository_url>
-```
+### Continuous Integration (CI)
 
-### 2. Create template structure & Run to create needed directories
-```bash
-touch template.py
-python template.py
-```
+**GitHub Actions**
 
-### 3. Create virtual environment & Install dependencies
-```bash
-conda create -p venv python=3.9 -y
-conda activate venv/
-pip install -r requirements.txt
-```
+![](images/GitOps/cicd-01.png)
 
-### 4. Initialize logger using constructor
-```bash
-src/mlProject/__init__.py
-```
+### Continuous Deployment (CD)
 
-### 5. Create source code
-    5.1 Update config.yaml
-    5.2 Update schema.yaml
-    5.3 Update params.yaml
-    5.4 Update the entity
-    5.5 Update the config
-    5.6 Update the components
-    5.7 Update the pipeline
-    5.8 Update the main.py
-    5.9 Update the app.py
+**ArgoCD**
+
+![](images/GitOps/argocd.png)
+
+### Web-UI
+
+**Diabetes Checking Web App**
+
+![](images/webapp/webapp-01.png)
+
+![](images/webapp/webapp-02.png)
 
 ## How to manual run? (FOR USERS)
 
@@ -71,6 +58,42 @@ docker run -dp 5000:5000 nutbodyslam053/bd528:v1
 
 ### STEP 2: Open web browser
 > Diabetes Prediction Web-UI: http://localhost:5000
+
+## Workflows (FOR OWNER)
+
+### 1. Create Github repository & Clone to local repository
+```bash
+git clone <github_repository_url>
+```
+
+### 2. Create template structure & Run to create needed directories
+```bash
+touch template.py
+python template.py
+```
+
+### 3. Create virtual environment & Install dependencies
+```bash
+conda create -p venv python=3.9 -y
+conda activate venv/
+pip install -r requirements.txt
+```
+
+### 4. Initialize logger using constructor
+```bash
+src/mlProject/__init__.py
+```
+
+### 5. Create source code
+    5.1 Update config.yaml
+    5.2 Update schema.yaml
+    5.3 Update params.yaml
+    5.4 Update the entity
+    5.5 Update the config
+    5.6 Update the components
+    5.7 Update the pipeline
+    5.8 Update the main.py
+    5.9 Update the app.py
 
 ## API Testing (FOR EVERYONE)
 
