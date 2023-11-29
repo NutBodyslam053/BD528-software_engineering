@@ -1,7 +1,16 @@
 # BD528-software_engineering
 
+## ML Streamlined Workflow
+
+**MLflow**
+
+![](images/MLOps/mlops-streamline.png)
+
 ## Deployment Architecture
-![](image/../images/GitOps/cicd-Architecture.png)
+
+**Kubernetes**
+
+![](images/GitOps/cicd-Architecture.png)
 
 ### Continuous Integration (CI)
 
