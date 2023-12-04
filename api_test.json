@@ -1,0 +1,19 @@
+{
+    "age": "60 or older",
+    "gender": "male",
+    "family_diabetes": "yes",
+    "highbp": "yes",
+    "physicallyactive": "more than half an hr",
+    "bmi": 27,
+    "smoking": "no",
+    "alcohol": "no",
+    "sleep": 6,
+    "soundsleep": 5,
+    "regularmedicine": "yes",
+    "junkfood": "occasionally",
+    "stress": "sometimes",
+    "bplevel": "high",
+    "pregancies": 0,
+    "pdiabetes": "no",
+    "uriationfreq": "quite often"
+}
