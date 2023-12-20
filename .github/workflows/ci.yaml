@@ -4,10 +4,10 @@ run-name: ${{ github.actor }} is building & deploying Python application
 
 on:
   push:
-    branches: [ "main" ]
+    # branches: [ "main" ]
   # pull_request:
   #   branches: [ "main" ]
-  # workflow_dispatch:
+  workflow_dispatch:
 
 jobs:
   build:
@@ -70,7 +70,7 @@ jobs:
           git config --global user.name ${{ secrets.G_USERNAME }}
           git config --global user.email ${{ secrets.G_USEREMAIL }}
           echo "$(pwd)"
-          yq -iy '.spec.replicas = 5' "$(pwd)/dev/deployment.yaml"
+          yq -iy '.spec.replicas = 3' "$(pwd)/dev/deployment.yaml"
           yq -iy '.spec.template.spec.containers[0].image = "${{ secrets.DOCKER_USERNAME }}/bd528:${{ github.sha }}"' "$(pwd)/dev/deployment.yaml"
           git add -A
           git commit -m "Update image for - ${{ github.sha }}"
