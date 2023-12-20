@@ -4,10 +4,10 @@ run-name: ${{ github.actor }} is building & deploying Python application
 
 on:
   push:
-  #   branches: [ "main" ]
+    branches: [ "main" ]
   # pull_request:
   #   branches: [ "main" ]
-  workflow_dispatch:
+  # workflow_dispatch:
 
 jobs:
   build:
