@@ -4,6 +4,15 @@ from src.mlProject.pipeline.stage_02_data_validation import DataValidationTraini
 from src.mlProject.pipeline.stage_03_data_transformation import DataTransformationTrainingPipeline
 from src.mlProject.pipeline.stage_04_model_trainer import ModelTrainerTrainingPipeline
 from src.mlProject.pipeline.stage_05_model_evaluation import ModelEvaluationTrainingPipeline
+import os
+from dotenv import load_dotenv
+
+
+load_dotenv()
+
+MLFLOW_TRACKING_URI = os.getenv('MLFLOW_TRACKING_URI')
+MLFLOW_TRACKING_USERNAME = os.getenv('MLFLOW_TRACKING_USERNAME')
+MLFLOW_TRACKING_PASSWORD = os.getenv('MLFLOW_TRACKING_PASSWORD')
 
 
 STAGE_NAME = "DATA INGESTION"
