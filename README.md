@@ -191,3 +191,19 @@ docker run -dp 5000:5000 \
 ```
 
 > MLflow tracking remote: https://dagshub.com/NutBodyslam053/BD528-software_engineering.mlflow
+
+---
+
+## Project Demo
+
+<p>
+    <img src="https://upload.wikimedia.org/wikipedia/commons/b/b8/YouTube_Logo_2017.svg" height="30"/> 
+</p>
+
+[![YouTube](images/project_demo.png)](https://www.youtube.com/watch?v=er_mWfr-YDA)
+
+## BD528 video part02 software development
+
+### Witchakorn Wanasanwongkot
+
+[@witchakornwanasanwongkot9657](https://www.youtube.com/@witchakornwanasanwongkot9657)
