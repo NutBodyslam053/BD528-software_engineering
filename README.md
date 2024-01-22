@@ -192,8 +192,6 @@ docker run -dp 5000:5000 \
 
 > MLflow tracking remote: https://dagshub.com/NutBodyslam053/BD528-software_engineering.mlflow
 
----
-
 ## Project Demo
 
 <p>
